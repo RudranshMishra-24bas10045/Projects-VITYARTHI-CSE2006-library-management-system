@@ -18,7 +18,7 @@ public class LibraryDatabase {
     public static List<Book> loadBooks() {
         File file = new File(FILE_NAME);
         if (!file.exists()) {
-            return new ArrayList<>(); // Return empty list if no file exists yet
+            return new ArrayList<>();
         }
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
